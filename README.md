@@ -100,15 +100,6 @@ This follows industry-standard practices.
 
 ---
 
-## Server Statistics (/stats)
-
-Minimum required:
-```json
-{
-  "total_requests": 10
-}
-```
-
 # How to Run the Project
 
 ## Install Go
