@@ -39,21 +39,6 @@ The application demonstrates safe concurrent request handling, shared state prot
 
 ---
 
-## Data Model
-
-The server stores structured JSON data using the following model:
-
-```json
-{
-  "id": "SE-2416",
-  "subject": "Advanced Programming",
-  "day": "Wednesday",
-  "time": "14:00-15:50",
-  "room": "С1.1.239",
-  "teacher": "Nurlybek T."
-}
-```
-
 ## Project Structure
 
 ```
