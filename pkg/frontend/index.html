@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Web Server Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Go Web Server Dashboard</h1>
+        <div class="server-info">
+            <span class="status-indicator status-online"></span>
+            Server running on: <strong>http://localhost:8080</strong>
+        </div>
+    </header>
+
+    <div class="dashboard">
+        <div class="card">
+            <h2>Save Data</h2>
+            <div class="form-group">
+                <label for="keyInput">Key:</label>
+                <input type="text" id="keyInput" placeholder="Enter key...">
+            </div>
+            <div class="form-group">
+                <label for="valueInput">Value:</label>
+                <input type="text" id="valueInput" placeholder="Enter value...">
+            </div>
+            <button onclick="saveData()">Save Data (POST)</button>
+            <div id="saveAlert" class="alert"></div>
+        </div>
+
+        <div class="card">
+            <h2>All Data</h2>
+            <button onclick="getAllData()">Refresh Data (GET)</button>
+            <div id="dataAlert" class="alert"></div>
+            <div class="data-display">
+                <pre id="allData">No data loaded yet...</pre>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🗑️ Delete Data</h2>
+            <div class="form-group">
+                <label for="deleteKeyInput">Key to Delete:</label>
+                <input type="text" id="deleteKeyInput" placeholder="Enter key to delete...">
+            </div>
+            <button onclick="deleteData()" class="delete-btn">Delete Data (DELETE)</button>
+            <div id="deleteAlert" class="alert"></div>
+        </div>
+
+        <div class="card">
+            <h2>📈 Server Statistics</h2>
+            <button onclick="getStats()">Get Stats (GET)</button>
+            <div id="statsAlert" class="alert"></div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="totalRequests">0</div>
+                    <div class="stat-label">Total Requests</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="dbSize">0</div>
+                    <div class="stat-label">Database Size</div>
+                </div>
+            </div>
+            <div class="data-display" style="margin-top: 20px;">
+                <pre id="statsData">No statistics loaded yet...</pre>
+            </div>
+        </div>
+    </div>
+
+    <footer class="server-info" style="margin-top: 30px;">
+        <p>Background worker updates every 5 seconds. Check terminal for logs.</p>
+        <p>Press Ctrl+C in terminal to stop the server.</p>
+    </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
