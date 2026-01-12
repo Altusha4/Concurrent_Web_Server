@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Go Web Server Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
 <div class="container">
@@ -41,7 +41,7 @@
         </div>
 
         <div class="card">
-            <h2>🗑️ Delete Data</h2>
+            <h2>Delete Data</h2>
             <div class="form-group">
                 <label for="deleteKeyInput">Key to Delete:</label>
                 <input type="text" id="deleteKeyInput" placeholder="Enter key to delete...">
@@ -51,7 +51,7 @@
         </div>
 
         <div class="card">
-            <h2>📈 Server Statistics</h2>
+            <h2>Server Statistics</h2>
             <button onclick="getStats()">Get Stats (GET)</button>
             <div id="statsAlert" class="alert"></div>
             <div class="stats-grid">
@@ -75,7 +75,6 @@
         <p>Press Ctrl+C in terminal to stop the server.</p>
     </footer>
 </div>
-
-<script src="app.js"></script>
+<script src="/static/js/app.js"></script>
 </body>
 </html>
